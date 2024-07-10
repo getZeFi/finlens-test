@@ -3,7 +3,7 @@ const axios = require("axios");
 async function fetchTransactions() {
   try {
     const response = await axios.get(
-      "https://11a1f1cf-e747-467a-a3ca-ba0ff399ab3a.mock.pstmn.io/transactions"
+      "https://a56171ae-06c3-4ce5-a940-2650bd4bf256.mock.pstmn.io/transactions"
     );
     // console.log("check-4", response.data);
     return response.data;
@@ -15,7 +15,7 @@ async function fetchTransactions() {
 async function fetchBillerToCategory() {
   try {
     const response = await axios.get(
-      "https://d701cceb-77bc-479e-b6f8-ee63eb13ebfd.mock.pstmn.io/biller-to-category"
+      "https://08c6c5e8-cb6f-49c4-9b37-626b4a70f1af.mock.pstmn.io/biller-to-category"
     );
     return response.data;
   } catch (error) {
