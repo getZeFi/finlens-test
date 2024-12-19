@@ -1,6 +1,22 @@
 # Finlens Test Project
 
-This project is a test setup for the Finlens application. It includes the following components:
+## Project Statement
+
+This project serves as a test setup for the Finlens application. The candidate is required to set up the database and server locally, following the steps provided below. The current code represents an inefficient implementation for fetching transactions from an API, categorizing them, and saving them into the database. Currently, it takes a significant amount of time to process 3,000 transactions.
+
+## Objective
+
+The candidate must write an optimized version of the code. The setup is designed to allow scalable processing of transactions, enabling multiple worker processes to handle the categorization queue in parallel. The candidate is expected to:
+
+1.Implement an optimized version of the provided code.
+
+2.Write performance hooks to log the execution time of the current inefficient version.
+
+3.Compare and monitor the performance of the optimized version using the same performance hooks.
+
+4.Provide a screen recording or screenshots demonstrating the performance metrics and terminal logs.
+
+### The Project code includes the following components:
 
 - An Express server with an API endpoint.
 - A Sequelize model and migration for the Transaction table, including the category column.
@@ -8,35 +24,8 @@ This project is a test setup for the Finlens application. It includes the follow
 - A worker that processes the queued jobs and inserts categorized transactions into the database.
 
 ## Project Structure
+<img width="609" alt="Screenshot 2024-12-19 at 3 09 08 PM" src="https://github.com/user-attachments/assets/160c0ff5-0c9c-46f6-a776-2020f71b1560" />
 
-finlens-test/
-├── src/
-│ ├── api/
-│ │ └── transactions.js (API endpoint for handling transaction-related requests)
-│ ├── config/
-│ │ ├── bullmqConfig.js (Configuration for BullMQ, used for job queuing)
-│ │ └── database.js (Database configuration for Sequelize)
-│ ├── controllers/
-│ │ └── transactionController.js (Controller for handling transaction-related logic)
-│ ├── migrations/
-│ │ └── 124535625-create-transactions.js (Migration file for creating the Transactions table)
-│ ├── models/
-│ │ ├── index.js (Entry point for Sequelize models)
-│ │ └── transaction.js (Sequelize model definition for the Transaction table)
-│ ├── services/
-│ │ ├── categorizationService.js (Service for categorizing transactions)
-│ │ └── transactionService.js (Service for processing transactions)
-│ ├── utils/
-│ │ └── apiUtils.js (Utility functions for API interactions)
-│ ├── workers/
-│ │ └── transactionWorker.js (Worker for processing queued transaction jobs)
-│ └── index.js (Main entry point for the Express server)
-├── .env (Environment variables configuration file)
-├── docker-compose.yml (Docker Compose configuration for setting up the environment)
-├── Dockerfile (Dockerfile for building the Docker image)
-├── package.json (Node.js dependencies and scripts)
-├── README.md (Project documentation)
-└── test.md (Test documentation or additional notes)
 
 ## Setup and Run
 
