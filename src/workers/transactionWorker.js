@@ -1,5 +1,5 @@
 const { Worker, QueueEvents } = require("bullmq");
-const { sequelize } = require("../config/databaseConfig");
+const { sequelize } = require("../config/database");
 const Transaction = require("../models/Transaction");
 
 const worker = new Worker("transactionQueue", async (job) => {
